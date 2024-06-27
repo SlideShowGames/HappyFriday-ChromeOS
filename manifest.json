@@ -1,5 +1,5 @@
 {
-   "app": {
+   "action": {
       "background": {
          "scripts": [ "chromeapp/chromeapp.js" ]
       }
@@ -14,10 +14,14 @@
    "manifest_version": 2,
    "name": "Happy Friday!",
    "offline_enabled": true,
-   "permissions": [ "storage", "https://ssl.google-analytics.com/", "identity" ],
+   "permissions": [ "storage", "https://ssl.google-analytics.com/", "identity", "tabs"],
    "sandbox": {
       "pages": [ "ga/embedded_ga_host.html" ]
    },
+   "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.0.30.4"
 }
